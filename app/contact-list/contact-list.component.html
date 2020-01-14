@@ -1,0 +1,25 @@
+<p class="heading">Contacts</p>
+<form #myform="ngForm" (ngSubmit)="addContact(myform)" [ngFormOptions]="{ updateOn: 'submit' }">
+    <input class="input" type="text" name="firstName" placeholder="First Name" [(ngModel)]="firstName">
+    <input class="input" type="text" name="lastName" placeholder="Last Name" [(ngModel)]="lastName">
+    <input class="input" type="text" name="number" placeholder="Mobile Number" [(ngModel)]="number">
+    <input class="input" type="text" name="group" placeholder="Group" [(ngModel)]="group">
+    <input class="button" type="submit" value={{label}}>
+</form>
+<div *ngFor="let data of transformedData;trackBy: trackItem">
+    <p class="group-heading">Group Name : - {{data.key}}</p>
+    <div class="data-heading">
+        <span class="data-head">First Name</span>
+        <span class="data-head">Last Name</span>
+        <span class="data-head">Mobile Number</span>
+        <span class="data-head">Delete</span>
+        <span class="data-head">Update</span>
+        </div>
+    <div class="data" *ngFor="let contact of data.value; trackBy: trackItem">
+        <span class="firstName">{{contact.firstName}}</span>
+        <span class="lastName">{{contact.lastName}}</span>
+        <span class="number">{{contact.number}}</span>
+        <button (click)=delete(contact.id)>Delete</button>
+        <button (click)=update(contact.id)>Update</button>
+    </div>
+</div>

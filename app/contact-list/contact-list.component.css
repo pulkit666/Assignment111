@@ -1,0 +1,43 @@
+.heading {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.input {
+  margin-right: 15px;
+  height: 20px;
+}
+
+.button {
+  height: 30px;
+  width: 150px;
+  color: cadetblue;
+}
+
+.group-heading {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.data-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.data-head {
+  font-size: 16px;
+  font-weight: 1000;
+}
+
+.data{
+    margin: 10px;
+}
